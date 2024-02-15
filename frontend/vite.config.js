@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server :{
     proxy :{
-      '/api' :"http://localhost:5000"
+      '/api' :"https://real-time-chat-app-t6sb.onrender.com/"
     },
   },
   plugins: [react()],
