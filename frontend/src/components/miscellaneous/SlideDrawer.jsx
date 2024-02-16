@@ -46,7 +46,7 @@ function SlideDrawer()
               },
              };
              console.log(search)
-             const { data } = await axios.get(`/api/user?search=${search}`, config);
+             const { data } = await axios.get(`https://real-time-chat-app-t6sb.onrender.com/api/user?search=${search}`, config);
              console.log(data)
              setLoading(false);
              setSearchResult(data);
@@ -69,7 +69,7 @@ function SlideDrawer()
                   Authorization: `Bearer ${user.token}`,
                 },
               };
-              const { data } = await axios.post(`/api/chat`, { userId }, config);
+              const { data } = await axios.post(`https://real-time-chat-app-t6sb.onrender.com/api/chat`, { userId }, config);
               if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
               setSelectedChat(data);
               setLoadingChat(false);

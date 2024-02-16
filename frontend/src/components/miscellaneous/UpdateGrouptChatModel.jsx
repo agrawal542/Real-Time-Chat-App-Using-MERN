@@ -37,7 +37,7 @@ function UpdateGrouptChatModel({fetchMessages,fetchAgain, setFetchAgain })
             },
         };
         const { data } = await axios.put(
-            `/api/chat/groupremove`,
+            `https://real-time-chat-app-t6sb.onrender.com/api/chat/groupremove`,
             {
                 chatId: selectedChat._id,
                 userId: user1._id,
@@ -83,7 +83,7 @@ function UpdateGrouptChatModel({fetchMessages,fetchAgain, setFetchAgain })
                 },
             };
             const { data } = await axios.put(
-                `/api/chat/groupadd`,
+                `https://real-time-chat-app-t6sb.onrender.com/api/chat/groupadd`,
                 {
                     chatId: selectedChat._id,
                     userId: user1._id,
@@ -118,7 +118,7 @@ function UpdateGrouptChatModel({fetchMessages,fetchAgain, setFetchAgain })
             },
         };
         const { data } = await axios.put(
-            `/api/chat/rename`,
+            `https://real-time-chat-app-t6sb.onrender.com/api/chat/rename`,
             {
                 chatId: selectedChat._id,
                 chatName: groupChatName,
@@ -156,7 +156,7 @@ function UpdateGrouptChatModel({fetchMessages,fetchAgain, setFetchAgain })
               Authorization: `Bearer ${user.token}`,
             },
            };
-          const { data } = await axios.get(`/api/user?search=${search}`, config);
+          const { data } = await axios.get(`https://real-time-chat-app-t6sb.onrender.com/api/user?search=${search}`, config);
           console.log(data);
           setLoading(false);
           setSearchResult(data);

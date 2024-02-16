@@ -82,9 +82,10 @@ function Signup()
             const config = {
                 headers: {
                   "Content-type": "application/json",
+                  "Access-Control-Allow-Origin": "*"
                 },
             };
-            const { data } = await axios.post("/api/user",{name,email,password,pic,},config);
+            const { data } = await axios.post("https://real-time-chat-app-t6sb.onrender.com/api/user",{name,email,password,pic,},config);
             console.log(data);
             toast({title: "Registration Successful",status: "success",duration: 5000,isClosable: true,position: "bottom",});
             localStorage.setItem("userInfo", JSON.stringify(data));

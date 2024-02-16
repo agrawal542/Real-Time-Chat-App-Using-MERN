@@ -55,7 +55,7 @@ function SingleChat({ fetchAgain, setFetchAgain })
             setLoading(true);
             
             const { data } = await axios.get(
-                `/api/message/${selectedChat._id}`,
+                `https://real-time-chat-app-t6sb.onrender.com/api/message/${selectedChat._id}`,
                 config
             );
             setMessages(data)
@@ -83,7 +83,7 @@ function SingleChat({ fetchAgain, setFetchAgain })
                 };
                 setNewMessage("");
                 const { data } = await axios.post(
-                    "/api/message",
+                    "https://real-time-chat-app-t6sb.onrender.com/api/message",
                     {
                         content: newMessage,
                         chatId: selectedChat,

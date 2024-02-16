@@ -25,7 +25,7 @@ function MyChats({fetchAgain})
                 },
             };
 
-            const { data } = await axios.get("/api/chat", config);
+            const { data } = await axios.get("https://real-time-chat-app-t6sb.onrender.com/api/chat", config);
             setChats(data);
         } 
         catch (error) 
