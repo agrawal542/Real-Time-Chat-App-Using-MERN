@@ -4,3 +4,8 @@
    overflow-y: scroll;
    scrollbar-width: none;
 }
+
+/* .scscroll-bar{
+   max-height: 475px;
+   overflow-y: auto;
+} */
