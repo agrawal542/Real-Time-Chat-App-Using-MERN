@@ -8,8 +8,8 @@ import axios from 'axios';
 import ChatLoading from '../ChatLoading';
 import UserListItem from '../userAvatar/UserListItem';
 import { getSender } from '../config/ChatLogics';
-import NotificationBadge from 'react-notification-badge';
-import {Effect} from 'react-notification-badge';
+// import NotificationBadge from 'react-notification-badge';
+// import {Effect} from 'react-notification-badge';
 
 function SlideDrawer() 
 {
@@ -101,7 +101,7 @@ function SlideDrawer()
           <div>
             <Menu>
               <MenuButton p={1}>
-                  <NotificationBadge count={notification.length} effect={Effect.SCALE}/>
+                  {/* <NotificationBadge count={notification.length} effect={Effect.SCALE}/> */}
                   <BellIcon fontSize="2xl" m={1} />
               </MenuButton>
               <MenuList pl={2}>
