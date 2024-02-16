@@ -10,10 +10,10 @@ const UserListItem = ({user,handleFunction }) =>
       <Avatar mr={2} size="sm" cursor="pointer" name={user.name} src={user.pic}/>
       <Box>
         <Text>{user.name}</Text>
-        <Text fontSize="xs">
+        {/* <Text fontSize="xs">
           <b>Email : </b>
           {user.email}
-        </Text>
+        </Text> */}
       </Box>
     </Box>
   );

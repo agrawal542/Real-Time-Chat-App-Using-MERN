@@ -195,7 +195,6 @@ function SingleChat({ fetchAgain, setFetchAgain })
                                 <>
                                 {selectedChat.chatName.toUpperCase()}
                                 <UpdateGrouptChatModel
-
                                     fetchMessages={fetchMessages}
                                     fetchAgain={fetchAgain}
                                     setFetchAgain={setFetchAgain}

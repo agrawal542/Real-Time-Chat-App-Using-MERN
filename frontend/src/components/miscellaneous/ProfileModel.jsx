@@ -3,9 +3,8 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 import { ChatState } from "../../context/ChatProvider";
   
 
-const ProfileModal = ({ children }) => 
+const ProfileModal = ({user, children }) => 
 {
-  const {user} = ChatState()
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -22,7 +21,7 @@ const ProfileModal = ({ children }) =>
             <ModalBody display="flex" flexDir="column" alignItems="center" justifyContent="space-between">
                 <Image borderRadius="full" boxSize="150px" src={user.pic} alt={user?.name}/>
                 <Text fontSize={{ base: "28px", md: "30px" }} fontFamily="Work sans">
-                        Email: {user.email}
+                        Email: {user?.email}
                 </Text>
             </ModalBody>
             <ModalFooter>
