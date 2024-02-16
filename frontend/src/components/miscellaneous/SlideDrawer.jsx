@@ -10,7 +10,7 @@ import UserListItem from '../userAvatar/UserListItem';
 import { getSender } from '../config/ChatLogics';
 import NotificationBadge from 'react-notification-badge';
 import {Effect} from 'react-notification-badge';
-
+import "./menu.css"
 function SlideDrawer() 
 {
     const [search, setSearch] = useState("");
@@ -98,11 +98,11 @@ function SlideDrawer()
                 Real-Time-Chat-App
           </Text>
           
-          <div>
+          <div className='menu'>
             <Menu>
               <MenuButton p={1}>
                   <NotificationBadge count={notification.length} effect={Effect.SCALE}/>
-                  <BellIcon fontSize="2xl" m={1} />
+                  <BellIcon  fontSize="2xl" m={1} />
               </MenuButton>
               <MenuList pl={2}>
                 {!notification.length && "No New Messages"}
@@ -151,7 +151,7 @@ function SlideDrawer()
                      <UserListItem key={user._id} user = {user} handleFunction={() => accessChat(user._id)}/>
                     )))
                 }
-               {loadingChat && <Spinner ml="auto" d="flex" />}
+               {loadingChat && <Spinner ml="auto" display="flex" />}
             </DrawerBody>
           </DrawerContent>
       </Drawer>
