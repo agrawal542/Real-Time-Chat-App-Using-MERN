@@ -19,6 +19,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "axios": "^1.6.7",
+    "dotenv": "^16.4.4",
     "framer-motion": "^11.0.5",
     "lottie-web": "^5.12.2",
     "react": "^18.2.0",
