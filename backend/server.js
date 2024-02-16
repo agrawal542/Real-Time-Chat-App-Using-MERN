@@ -6,7 +6,7 @@ import userRoutes from "./routes/user.routes.js"
 import chatRoutes from "./routes/chat.routes.js"
 import messageRoutes from "./routes/message.routes.js"
 import { errorHandler, notFound } from "./middlewares/error.middleware.js";
-// import cors from "cors"
+import cors from "cors"
 import { Server } from "socket.io";
 import { createServer } from 'node:http';
 
@@ -22,7 +22,7 @@ const app = express()
 const port = process.env.PORT || 4000
 
 app.use(express.json()) ;
-
+app.use(cors())
 
 
 app.get('/',(req,res)=>{

@@ -27,9 +27,10 @@ function Login()
             const config = {
                 headers: {
                   "Content-type": "application/json",
+                  "Access-Control-Allow-Origin": "*"
                 },
             };
-            const { data } = await axios.post("https://real-time-chat-app-t6sb.onrender.com/api/user/login",{email,password},config);
+            const { data } = await axios.post("http://localhost:5000/api/user/login",{email,password},config);
             toast({title: "Login Successful",status: "success",duration: 5000,isClosable: true,position: "bottom",});
             localStorage.setItem("userInfo", JSON.stringify(data));
             setLoading(false);
